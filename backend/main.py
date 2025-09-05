@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from cors.config import settings
+
 app=FastAPI(
     title="adventure time",
     description="this is me starting to do fastapi things",
@@ -12,7 +14,7 @@ app=FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=["*"],
+    allow_origins=settings.ALLOWED_ORIGINS,
     allow_headers=["*"],
     allow_methods=["*"],
     
