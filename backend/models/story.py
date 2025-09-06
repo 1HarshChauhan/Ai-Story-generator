@@ -20,7 +20,7 @@ class StoryNode(Base):
     story_id=Column(Integer,ForeignKey("stories.id"),index=True)
     content=Column(String),
     is_root=Column(Boolean,default=False)
-    is_ending=Column(Boolean,default=False)
+    is_ending=Column(B oolean,default=False)
     is_winning_ending=Column(Boolean,default=False)
     options=Column(JSON,default=list)
     
